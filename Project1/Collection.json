@@ -1,0 +1,71 @@
+db.createCollection("Usuario")
+
+db.Usuario.insertOne(
+    {
+        "ID_Usuario": 14586,
+        "Nombre": "Juan",
+        "Ape_Pat": "Domingo",
+        "Ape_Mat": "Alvarado",
+        "Edad": 19,
+        "Correo": "jdomalv@gmail.com",
+        "Fec_Nac": "2002-07-29",
+        "Num_Cel": "996872345",
+        "Usuario": "u202314586",
+        "Clave": "contra123"
+    }
+)
+
+
+db.createCollection("Paquetes")
+
+db.Paquetes.insertOne(
+    {
+        "ID_Paquete": 2,
+        "ID_Usuario": 14586,
+        "Fec_Inicio": "2023-06-01",
+        "Fec_Termino": "2023-08-01",
+        "Nom_Paquete": "Intermedio",
+        "Precio": "350.00"
+    }
+)
+
+
+db.createCollection("Simulaciones")
+
+db.Simulaciones.insertOne(
+    {
+        "ID_Sim_Int": "17456", 
+        "ID_Usuario": 14586,
+        "Fecha_Int": "2023-06-17",
+        "Hora_Inicio": "12:00",
+        "Hora_Final": "14:00",
+        "Preguntas_Entrevista":[
+            {
+                "ID_Pregunta": 1,
+                "Enunciado": "¿Has tenido alguna experiencia laboral anterior?",
+            },
+            {
+                "ID_Pregunta": 3,
+                "Enunciado": "¿Que crees que podrías aportar en esta empresa?",
+            },
+            {
+                "ID_Pregunta": 7,
+                "Enunciado": "¿Cuales crees que serían tus fortalezas?",
+            },
+            {
+                "ID_Pregunta": 11,
+                "Enunciado": "¿Que es lo que aspiras lograr en nuestra empresa?",
+            },
+            {
+                "ID_Pregunta": 8,
+                "Enunciado": "¿Cuales crees que serían tus debilidades?",
+            }
+        ],
+        "ID_Grabacion": "1745617062023",
+        "Min_Duracion": "120",
+        "ID_Eval_Ent": "17465601",
+        "Calif_Eval": "3",
+        "Coment_Eval": "Falta identificar mejor cuales son sus fortalezas y debilidades"
+    }
+)
+

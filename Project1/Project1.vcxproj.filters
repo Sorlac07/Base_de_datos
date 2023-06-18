@@ -16,5 +16,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Scrip.sql" />
+    <None Include="Collection.json" />
   </ItemGroup>
 </Project>
