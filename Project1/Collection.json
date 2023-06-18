@@ -1,4 +1,3 @@
-db.createCollection("Usuario")
 
 db.Usuario.insertOne(
     {
@@ -16,8 +15,6 @@ db.Usuario.insertOne(
 )
 
 
-db.createCollection("Paquetes")
-
 db.Paquetes.insertOne(
     {
         "ID_Paquete": 2,
@@ -29,8 +26,6 @@ db.Paquetes.insertOne(
     }
 )
 
-
-db.createCollection("Simulaciones")
 
 db.Simulaciones.insertOne(
     {

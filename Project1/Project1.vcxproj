@@ -111,8 +111,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="SchemaValidation_Simulaciones.json" />
+    <None Include="SchemaValidation_Usuario.json" />
     <None Include="Scrip.sql" />
     <None Include="Collection.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SchemaValidation_Paquetes.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

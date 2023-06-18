@@ -1,0 +1,68 @@
+db.createCollection("Simulaciones", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: ["ID_Sim_Int", "ID_Usuario", "Fecha_Int", "Hora_Inicio", "Hora_Final", "Preguntas_Entrevista", "ID_Grabacion", "Min_Duracion", "ID_Eval_Ent", "Calif_Eval", "Coment_Eval"],
+         properties: {
+            ID_Sim_Int: {
+               bsonType: "string",
+               description: "ID de la simulación"
+            },
+            ID_Usuario: {
+               bsonType: "int",
+               description: "ID del usuario relacionado"
+            },
+            Fecha_Int: {
+               bsonType: "date",
+               description: "Fecha de la simulación en formato YYYY-MM-DD"
+            },
+            Hora_Inicio: {
+               bsonType: "string",
+               description: "Hora de inicio de la simulación"
+            },
+            Hora_Final: {
+               bsonType: "string",
+               description: "Hora de finalización de la simulación"
+            },
+            Preguntas_Entrevista: {
+               bsonType: "array",
+               description: "Preguntas de la entrevista",
+               items: {
+                  bsonType: "object",
+                  required: ["ID_Pregunta", "Enunciado"],
+                  properties: {
+                     ID_Pregunta: {
+                        bsonType: "int",
+                        description: "ID de la pregunta"
+                     },
+                     Enunciado: {
+                        bsonType: "string",
+                        description: "Enunciado de la pregunta"
+                     }
+                  }
+               }
+            },
+            ID_Grabacion: {
+               bsonType: "string",
+               description: "ID de la grabación"
+            },
+            Min_Duracion: {
+               bsonType: "string",
+               description: "Duración mínima de la simulación"
+            },
+            ID_Eval_Ent: {
+               bsonType: "string",
+               description: "ID de la evaluación de la entrevista"
+            },
+            Calif_Eval: {
+               bsonType: "string",
+               description: "Calificación de la evaluación"
+            },
+            Coment_Eval: {
+               bsonType: "string",
+               description: "Comentario de la evaluación"
+            }
+         }
+      }
+   }
+})

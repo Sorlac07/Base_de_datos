@@ -1,0 +1,51 @@
+db.createCollection("Usuario", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: ["ID_Usuario", "Nombre", "Ape_Pat", "Ape_Mat", "Edad", "Correo", "Fec_Nac", "Num_Cel", "Usuario", "Clave"],
+         properties: {
+            ID_Usuario: {
+               bsonType: "int",
+               description: "ID del usuario"
+            },
+            Nombre: {
+               bsonType: "string",
+               description: "Nombre del usuario"
+            },
+            Ape_Pat: {
+               bsonType: "string",
+               description: "Apellido paterno del usuario"
+            },
+            Ape_Mat: {
+               bsonType: "string",
+               description: "Apellido materno del usuario"
+            },
+            Edad: {
+               bsonType: "int",
+               description: "Edad del usuario"
+            },
+            Correo: {
+               bsonType: "string",
+               description: "Correo electrónico del usuario"
+            },
+            Fec_Nac: {
+               bsonType: "date",
+               description: "Fecha de nacimiento del usuario en formato YYYY-MM-DD"
+            },
+            Num_Cel: {
+               bsonType: "string",
+               description: "Número de celular del usuario"
+            },
+            Usuario: {
+               bsonType: "string",
+               description: "Nombre de usuario"
+            },
+            Clave: {
+               bsonType: "string",
+               description: "Contraseña del usuario"
+            }
+         }
+      }
+   }
+})
+

@@ -1,0 +1,34 @@
+db.createCollection("Paquetes", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: ["ID_Paquete", "ID_Usuario", "Fec_Inicio", "Fec_Termino", "Nom_Paquete", "Precio"],
+         properties: {
+            ID_Paquete: {
+               bsonType: "int",
+               description: "ID del paquete"
+            },
+            ID_Usuario: {
+               bsonType: "int",
+               description: "ID del usuario relacionado"
+            },
+            Fec_Inicio: {
+               bsonType: "date",
+               description: "Fecha de inicio del paquete en formato YYYY-MM-DD"
+            },
+            Fec_Termino: {
+               bsonType: "date",
+               description: "Fecha de término del paquete en formato YYYY-MM-DD"
+            },
+            Nom_Paquete: {
+               bsonType: "string",
+               description: "Nombre del paquete"
+            },
+            Precio: {
+               bsonType: "decimal",
+               description: "Precio del paquete"
+            }
+         }
+      }
+   }
+})

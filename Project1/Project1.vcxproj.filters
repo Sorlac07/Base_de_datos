@@ -13,9 +13,23 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Collections Schema Validation">
+      <UniqueIdentifier>{8779317c-cdc9-454d-a26f-718297ed472c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Scrip.sql" />
     <None Include="Collection.json" />
+    <None Include="SchemaValidation_Usuario.json">
+      <Filter>Collections Schema Validation</Filter>
+    </None>
+    <None Include="SchemaValidation_Simulaciones.json">
+      <Filter>Collections Schema Validation</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SchemaValidation_Paquetes.json">
+      <Filter>Collections Schema Validation</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
