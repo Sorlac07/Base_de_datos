@@ -1,3 +1,9 @@
+db.createCollection("Usuario")
+db.createCollection("Paquetes")
+db.createCollection("Simulaciones")
+db.createCollection("Curriculum")
+db.createCollection("Evaluaciones")
+
 
 db.Usuario.insertOne(
     {
@@ -61,6 +67,124 @@ db.Simulaciones.insertOne(
         "ID_Eval_Ent": "17465601",
         "Calif_Eval": "3",
         "Coment_Eval": "Falta identificar mejor cuales son sus fortalezas y debilidades"
+    }
+)
+
+
+db.Curriculum.insertOne(
+    {"ID_Usuario": "17456",
+    "ID_Curriculum": "1",
+    "Fecha_Crea_CV": "2023-07-10",
+    "Fecha_Mod_CV": "",
+    "ID_Carrera": "1",
+    "Nom_Carrera": "Ingeniería Civil",
+    "Idioma":[
+        {
+            "ID_Idioma": "1",
+            "Nom_Idioma": "Inglés",
+            "Nom_Nv_Idioma": "3"
+        },
+        {
+            "ID_Idioma": "3",
+            "Nom_Idioma": "Francés",
+            "Nom_Nv_Idioma": "2"
+        }
+    ],
+    "Institucion": [
+        {
+            "ID_Institucion": "3",
+            "Nom_Institucion": "Universidad de Lima"
+        }
+    ],
+    "Fortalezas": [
+        {
+            "ID_Fortaleza": "2",
+            "Nom_Fortaleza": "Liderazgo"
+        },
+        {
+            "ID_Fortaleza": "4",
+            "Nom_Fortaleza": "Resolución de problemas"
+        },
+        {
+            "ID_Fortaleza": "5",
+            "Nom_Fortaleza": "Adaptabilidad"
+        }
+    ],
+    "Hab_Tecnicas": [
+        {
+            "ID_Hab_Tec": "2",
+            "Nom_Hab_Tec": "Diseño Gráfico",
+            "ID_Nv_Hab_Tec": "1",
+            "Nom_Nv_Hab_Tec": "Principiante"
+        },
+        {
+            "ID_Hab_Tec": "4",
+            "Nom_Hab_Tec": "Redes y seguridad",
+            "ID_Nv_Hab_Tec": "1",
+            "Nom_Nv_Hab_Tec": "Principiante"
+        }
+    ]
+})
+
+
+
+
+db.Evaluaciones.insertOne(
+    {
+        "ID_Usuario": "17456",
+        "Fec_Rend_Eval": "2023-07-02",
+        "Preguntas":[
+            {
+                "ID_Pregunta_Eval": "1",
+                "Enunciado": "¿Cuáles son tus principales fortalezas?"
+            },
+            {
+                "ID_Pregunta_Eval": "2",
+                "Enunciado": "¿Cómo te describirías a ti mismo/a?"
+            },
+            {
+                "ID_Pregunta_Eval": "3",
+                "Enunciado": "Háblame sobre una situación en la que tuviste que resolver un problema complicado."
+            },
+            {
+                "ID_Pregunta_Eval": "4",
+                "Enunciado": "¿Cuál ha sido tu mayor logro profesional hasta ahora?"
+            },
+            {
+                "ID_Pregunta_Eval": "5",
+                "Enunciado": "¿Cómo manejas situaciones de estrés o presión?"
+            },
+            {
+                "ID_Pregunta_Eval": "6",
+                "Enunciado": "Háblame sobre un proyecto en el que trabajaste en equipo."
+            },
+            {
+                "ID_Pregunta_Eval": "7",
+                "Enunciado": "¿Cómo te mantienes actualizado/a en tu área de expertise?"
+            }
+        ],
+        "Reporte_Evaluacion":[
+            {
+                "ID_Report_Eval": "6",
+                "Fec_Report_Eval": "2023-07-03",
+                "ID_Nivel_Usuario": "3",
+                "Nom_Nivel": "Intermedio",
+                "Debilidades_Encontradas": [
+                    {
+                        "ID_Debilidad": "1",
+                        "Nom_Debilidad": "Nerviosismo"
+                    },
+                    {
+                        "ID_Debilidad": "2",
+                        "Nom_Debilidad": "Falta de experiencia laboral"
+                    },
+                    {
+                        "ID_Debilidad": "3",
+                        "Nom_Debilidad": "Dificultad para expresarse claramente"
+                    }
+                ]
+            }
+        ]
     }
 )
 
