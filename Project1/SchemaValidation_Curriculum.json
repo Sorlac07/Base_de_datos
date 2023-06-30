@@ -1,0 +1,118 @@
+db.createCollection("Curriculum", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: ["ID_Usuario", "ID_Curriculum", "Fecha_Crea_CV", "ID_Carrera", "Nom_Carrera", "Idioma", "Institucion", "Fortalezas", "Hab_Tecnicas"],
+         properties: {
+            ID_Usuario: {
+               bsonType: "string",
+               description: "ID del usuario"
+            },
+            ID_Curriculum: {
+               bsonType: "string",
+               description: "ID del curriculum"
+            },
+            Fecha_Crea_CV: {
+               bsonType: "date",
+               description: "Fecha de creación del currículum en formato YYYY-MM-DD"
+            },
+            Fecha_Mod_CV: {
+               bsonType: "date",
+               description: "Fecha de modificación del currículum en formato YYYY-MM-DD"
+            },
+            ID_Carrera: {
+               bsonType: "string",
+               description: "ID de la carrera"
+            },
+            Nom_Carrera: {
+               bsonType: "string",
+               description: "Nombre de la carrera"
+            },
+            Idioma: {
+               bsonType: "array",
+               description: "Lista de idiomas",
+               items: {
+                  bsonType: "object",
+                  required: ["ID_Idioma", "Nom_Idioma", "Nom_Nv_Idioma"],
+                  properties: {
+                     ID_Idioma: {
+                        bsonType: "string",
+                        description: "ID del idioma"
+                     },
+                     Nom_Idioma: {
+                        bsonType: "string",
+                        description: "Nombre del idioma"
+                     },
+                     Nom_Nv_Idioma: {
+                        bsonType: "string",
+                        description: "Nivel del idioma"
+                     }
+                  }
+               }
+            },
+            Institucion: {
+               bsonType: "array",
+               description: "Lista de instituciones",
+               items: {
+                  bsonType: "object",
+                  required: ["ID_Institucion", "Nom_Institucion"],
+                  properties: {
+                     ID_Institucion: {
+                        bsonType: "string",
+                        description: "ID de la institución"
+                     },
+                     Nom_Institucion: {
+                        bsonType: "string",
+                        description: "Nombre de la institución"
+                     }
+                  }
+               }
+            },
+            Fortalezas: {
+               bsonType: "array",
+               description: "Lista de fortalezas",
+               items: {
+                  bsonType: "object",
+                  required: ["ID_Fortaleza", "Nom_Fortaleza"],
+                  properties: {
+                     ID_Fortaleza: {
+                        bsonType: "string",
+                        description: "ID de la fortaleza"
+                     },
+                     Nom_Fortaleza: {
+                        bsonType: "string",
+                        description: "Nombre de la fortaleza"
+                     }
+                  }
+               }
+            },
+            Hab_Tecnicas: {
+               bsonType: "array",
+               description: "Lista de habilidades técnicas",
+               items: {
+                  bsonType: "object",
+                  required: ["ID_Hab_Tec", "Nom_Hab_Tec", "ID_Nv_Hab_Tec", "Nom_Nv_Hab_Tec"],
+                  properties: {
+                     ID_Hab_Tec: {
+                        bsonType: "string",
+                        description: "ID de la habilidad técnica"
+                     },
+                     Nom_Hab_Tec: {
+                        bsonType: "string",
+                        description: "Nombre de la habilidad técnica"
+                     },
+                     ID_Nv_Hab_Tec: {
+                        bsonType: "string",
+                        description: "ID del nivel de habilidad técnica"
+                     },
+                     Nom_Nv_Hab_Tec: {
+                        bsonType: "string",
+                        description: "Nombre del nivel de habilidad técnica"
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+})

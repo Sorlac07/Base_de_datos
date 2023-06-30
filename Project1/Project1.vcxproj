@@ -111,6 +111,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="SchemaValidation_Curriculum.json" />
+    <None Include="SchemaValidation_Evaluaciones.json" />
     <None Include="SchemaValidation_Simulaciones.json" />
     <None Include="SchemaValidation_Usuario.json" />
     <None Include="Scrip.sql" />

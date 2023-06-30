@@ -1,0 +1,80 @@
+db.createCollection("Evaluaciones", {
+   validator: {
+      $jsonSchema: {
+         bsonType: "object",
+         required: ["ID_Usuario", "Fec_Rend_Eval", "Preguntas", "Reporte_Evaluacion"],
+         properties: {
+            ID_Usuario: {
+               bsonType: "string",
+               description: "ID del usuario"
+            },
+            Fec_Rend_Eval: {
+               bsonType: "date",
+               description: "Fecha de rendición de la evaluación en formato YYYY-MM-DD"
+            },
+            Preguntas: {
+               bsonType: "array",
+               description: "Lista de preguntas",
+               items: {
+                  bsonType: "object",
+                  required: ["ID_Pregunta_Eval", "Enunciado"],
+                  properties: {
+                     ID_Pregunta_Eval: {
+                        bsonType: "string",
+                        description: "ID de la pregunta de evaluación"
+                     },
+                     Enunciado: {
+                        bsonType: "string",
+                        description: "Enunciado de la pregunta de evaluación"
+                     }
+                  }
+               }
+            },
+            Reporte_Evaluacion: {
+               bsonType: "array",
+               description: "Lista de reportes de evaluación",
+               items: {
+                  bsonType: "object",
+                  required: ["ID_Report_Eval", "Fec_Report_Eval", "ID_Nivel_Usuario", "Nom_Nivel", "Debilidades_Encontradas"],
+                  properties: {
+                     ID_Report_Eval: {
+                        bsonType: "string",
+                        description: "ID del reporte de evaluación"
+                     },
+                     Fec_Report_Eval: {
+                        bsonType: "date",
+                        description: "Fecha del reporte de evaluación en formato YYYY-MM-DD"
+                     },
+                     ID_Nivel_Usuario: {
+                        bsonType: "string",
+                        description: "ID del nivel de usuario"
+                     },
+                     Nom_Nivel: {
+                        bsonType: "string",
+                        description: "Nombre del nivel de usuario"
+                     },
+                     Debilidades_Encontradas: {
+                        bsonType: "array",
+                        description: "Lista de debilidades encontradas",
+                        items: {
+                           bsonType: "object",
+                           required: ["ID_Debilidad", "Nom_Debilidad"],
+                           properties: {
+                              ID_Debilidad: {
+                                 bsonType: "string",
+                                 description: "ID de la debilidad"
+                              },
+                              Nom_Debilidad: {
+                                 bsonType: "string",
+                                 description: "Nombre de la debilidad"
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+})

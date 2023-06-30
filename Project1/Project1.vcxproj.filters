@@ -26,6 +26,12 @@
     <None Include="SchemaValidation_Simulaciones.json">
       <Filter>Collections Schema Validation</Filter>
     </None>
+    <None Include="SchemaValidation_Curriculum.json">
+      <Filter>Collections Schema Validation</Filter>
+    </None>
+    <None Include="SchemaValidation_Evaluaciones.json">
+      <Filter>Collections Schema Validation</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SchemaValidation_Paquetes.json">
